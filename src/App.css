@@ -1,0 +1,47 @@
+:root {
+    /*--accent: #000000;*/
+    --constrast-1: #111111;
+    --constrast-2: #fefefe;
+    /*--bg-color: #eeeeee;*/
+
+    --margin-small: 0.2em;
+    --margin-big: 2em;
+}
+
+article {
+    margin-left: var(--margin-big);
+}
+
+
+.App {
+    background-color: var(--constrast-2);
+}
+
+.App header {
+    /*min-height: calc(10px + 1vh);*/
+    background-color: var(--constrast-1);
+    color: var(--constrast-2);
+}
+
+
+#projects {
+    border: var(--constrast-2) 2px dashed;
+}
+
+#projects > * {
+    border: var(--constrast-1) 2px dotted;
+}
+
+article.skill {
+    display: inline-block;
+    margin-right: var(--margin-big);
+
+}
+
+.project-in-progress {
+
+}
+
+#typed-modeler-project {
+
+}
