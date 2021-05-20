@@ -4,15 +4,16 @@ import {Projects} from "./components/Projects";
 import {CV} from "./components/CV";
 
 function App() {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(true);
     return (
         <div className="App">
             {visible ? (
-                <>
-                    <header>Witam</header>
-                    <Projects/>
-                    <CV/>
-                </>
+                <CV/>
+                // <>
+                //     {/*<header>Witam</header>*/}
+                //     {/*<Projects/>*/}
+                //     <CV/>
+                // </>
             ) : (
                 <>
                     <h1>Strona w budowie</h1>
