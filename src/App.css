@@ -18,6 +18,7 @@
     /*--bg-color: #eeeeee;*/
 
     --margin-small: 0.2rem;
+    --margin-medium: 1rem;
     --margin-big: 2rem;
 
     --golden-ratio-small: 0.38197;
@@ -62,15 +63,6 @@ article.skill {
 .time {
     margin-left: var(--margin-small);
 }
-
-h5 {
-    margin: 0;
-}
-
-/*.gold-box-be {*/
-/*    display: grid;*/
-/*    grid-template-columns: calc(var(--golden-ratio-big) * 100%) calc(var(--golden-ratio-small) * 100%);*/
-/*}*/
 
 .gold-box-le {
     display: grid;
@@ -137,10 +129,6 @@ picture > * {
     border-radius: 50%;
 }
 
-#experience {
-    margin-left: calc(var(--margin-big));
-}
-
 
 /*TOP PANEL*/
 
@@ -156,5 +144,29 @@ picture > * {
     font-size: 3rem;
 }
 
+.header-panel h5 {
+    /*margin: 0;*/
+}
 
 
+/*MAIN PANEL*/
+
+#experience {
+    margin-left: var(--margin-big);
+}
+
+#experience p {
+    /*margin-left: var(--margin-medium);*/
+    grid-column: 1 / span 2;
+}
+
+#experience article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#experience .time {
+    align-self: end;
+    justify-self: end;
+    margin-right: var(--margin-big);
+}
