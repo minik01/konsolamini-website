@@ -116,6 +116,9 @@ export function Skills() {
 
                 </article>
             )}
+            <br/>
+
+            <h3>Język angielski B2</h3>
 
 
         </div>

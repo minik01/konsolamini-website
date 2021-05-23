@@ -30,7 +30,7 @@ currentLang!.set('experience.konsolamini.title', 'Konsolamini');
 currentLang!.set('experience.konsolamini.content', 'W marcu 2019 założyłem działalność gospodarczą.');
 
 currentLang!.set('experience.bv.title', 'blue veery');
-currentLang!.set('experience.bv.content', 'Jako Full-stack developer: projekty Angular (4-8) + Spring.');
+currentLang!.set('experience.bv.content', 'Jako Full-stack developer: projekty pisane w Angular (4-8), React Native i Spring.');
 
 
 
