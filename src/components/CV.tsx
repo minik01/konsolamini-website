@@ -15,14 +15,21 @@ export function CV() {
             <div className={'gold-box-le h100'}>
 
                 <div className={'panel'}>
-                    <picture className={'photo'} style={{display: "block"}}>
-                        <img src="me.png" alt={'my photo'}/>
-                    </picture>
+                    <div className={'photo'}>
+                        <picture >
+                            <img src="me.png" alt={'my photo'}/>
+                        </picture>
+                    </div>
 
-                    <div className={'reversed-colors'}>Dane kontaktowe:</div>
-                    E-mail: konsolamini@gmail.com
-                    telefon: 736 77 22 65
-                    Data urodzenia: 18.03.1993
+                    <h2 className={'reversed-colors'}>Dane kontaktowe:</h2>
+
+                    <p>
+
+                        E-mail:&nbsp;konsolamini@gmail.com
+                        telefon:&nbsp;736 77 22 65
+                        Data&nbsp;urodzenia:&nbsp;18.03.1993
+                    </p>
+
 
                     <Skills/>
                 </div>
@@ -30,8 +37,8 @@ export function CV() {
                 <div>
                     <div className={'header-panel reversed-colors'} id={'my-name'}>
                         <h1>Dominik Wojnar</h1>
-                        <h5>{translate('academic.mgr')}</h5>
-                        <h5>{translate('academic.engineer')}</h5>
+                        {/*<h5>{translate('academic.mgr')}</h5>*/}
+                        {/*<h5>{translate('academic.engineer')}</h5>*/}
                     </div>
                     <Experience/>
                 </div>

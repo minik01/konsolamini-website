@@ -32,7 +32,7 @@ body {
 
 .App {
     height: 100vh;
-    /*overflow-y: hidden;*/
+    overflow-x: clip;
 }
 
 body {
@@ -76,7 +76,7 @@ h5 {
     display: grid;
     gap: var(--margin-small);
     /*grid-template-columns: calc(var(--golden-ratio-small) * 100%) calc(var(--golden-ratio-big) * 100%);*/
-    --l-size: max(calc(var(--margin-big) * 8), 200px);
+    --l-size: max(calc(var(--margin-big) * 10), 200px);
     grid-template-columns: var(--l-size) calc(calc(100% - var(--l-size)));
 }
 
@@ -88,31 +88,44 @@ h5 {
     height: 100%
 }
 
-.panel {
-    background-color: var(--light-shades);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
 .reversed-colors {
     background-color: var(--dark-shades);
     color: var(--light-shades);
 }
 
-.header-panel {
-    padding: calc(var(--margin-big) * 2);
-    z-index: -1;
-    margin-left: calc(var(--margin-big) * -1);
-    margin-top: calc(var(--margin-big) * -1);
-    text-align: center;
+
+/*LEFT PANEL*/
+
+.panel {
+    background-color: var(--light-shades);
+    z-index: 1;
+    display: grid;
+    padding-left: var(--margin-big);
+    padding-right: 0;
+}
+
+.panel h2 {
+    padding: var(--margin-small);
+    font-size: 1.3rem;
+}
+
+.panel h3 {
+    font-size: 1.1rem;
+}
+
+.panel p {
+    margin-left: var(--margin-small);
+    font-size: 1.0rem;
 
 }
 
+.panel .photo {
+    padding: 2rem;
+    margin-left: -2rem;
+}
+
 picture {
-    /*max-width: calc(var(--margin-big)*5);*/
+    display: contents;
     max-width: min(calc(var(--margin-big) * 5), 200px);
     margin: calc(var(--margin-big));
 }
@@ -129,7 +142,19 @@ picture > * {
 }
 
 
-/*svg{*/
-/*    position: absolute;*/
-/*}*/
+/*TOP PANEL*/
+
+.header-panel {
+    padding: calc(var(--margin-big) * 1.2);
+    z-index: -1;
+    margin-left: calc(var(--margin-big) * -1);
+    margin-top: calc(var(--margin-big) * 1);
+    text-align: center;
+}
+
+.header-panel h1 {
+    font-size: 3rem;
+}
+
+
 
