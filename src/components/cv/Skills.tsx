@@ -50,6 +50,16 @@ class Skill {
     }
 }
 
+function renderSkill(skill: Skill) {
+    return <article className={'skill'} key={skill.name}>
+        <div className={'skill-name'}>
+            {skill.icon}
+            <span>{skill.name} </span>
+        </div>
+        <Stars value={skill.stars} description={skill.starsDescription}/>
+    </article>;
+}
+
 export function Skills() {
     const skills =
 
@@ -102,25 +112,12 @@ export function Skills() {
     return (
         <div id={'skills'}>
             {skills.frontend.map(skill =>
-                <article className={'skill'} key={skill.name}>
-                    <h3>{skill.icon}{skill.name}</h3>
-                    <Stars value={skill.stars} description={skill.starsDescription}/>
-
-                </article>
+                renderSkill(skill)
             )}
             <br/>
             {skills.backend.map(skill =>
-                <article className={'skill'} key={skill.name}>
-                    <h3>{skill.icon}{skill.name}</h3>
-                    <Stars value={skill.stars} description={skill.starsDescription}/>
-
-                </article>
+                renderSkill(skill)
             )}
-            <br/>
-
-            <h3>Język angielski B2</h3>
-
-
         </div>
     );
 }

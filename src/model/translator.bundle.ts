@@ -18,11 +18,19 @@ currentLang!.set('month.11', 'listopad');
 currentLang!.set('month.12', 'grudzień');
 currentLang!.set('common.present', 'aktualnie');
 
-currentLang!.set('academic.mgr', 'Magister informatyki');
-currentLang!.set('academic.mgr.details', 'Politechnika Wrocławska');
-currentLang!.set('academic.engineer', 'Inżynier teleinformatyki');
-currentLang!.set('academic.engineer.details', 'Zachodniopomorski Uniwersytet Technologiczny');
+currentLang!.set('common.skills', 'umiejętności');
 
+currentLang!.set('common.contact', 'dane kontaktowe');
+currentLang!.set('common.languages', 'języki');
+
+
+currentLang!.set('education.title', 'wykształcenie');
+currentLang!.set('education.mgr', 'Magister informatyki');
+currentLang!.set('education.mgr.details', 'Politechnika Wrocławska');
+currentLang!.set('education.engineer', 'Inżynier teleinformatyki');
+currentLang!.set('education.engineer.details', 'Zachodniopomorski Uniwersytet Technologiczny');
+
+currentLang!.set('experience.title', 'doświadczenie');
 currentLang!.set('experience.unit4.title', 'Unit4');
 currentLang!.set('experience.unit4.content', 'Jako Frontend developer: projekt w Angularze. Sporadycznie zadania w języku Java.');
 

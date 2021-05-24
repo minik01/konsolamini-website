@@ -23,11 +23,17 @@ export function Experience() {
         <div id={'experience'}>
             {exp.map(company =>
                 <article key={company.id} id={company.id}>
+                    <div>
 
-                    <h2>{translate('experience.' + company.id + '.title')}</h2>
-                    <span className={'time'}>
-                        {company.getDate()}
-                    </span>
+                        <h2>{translate('experience.' + company.id + '.title')}</h2>
+                        <div className={'dot'}/>
+
+                        <span className={'time'}>
+                            {company.getDate()}
+                        </span>
+
+                    </div>
+
                     <p>{translate('experience.' + company.id + '.content')}</p>
                 </article>
             )}
