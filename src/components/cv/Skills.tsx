@@ -21,7 +21,8 @@ function Stars(props: { value: number, description: string }) {
 
     const filledStarsInnerStyle = {
         whiteSpace: 'nowrap',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        padding: 0
     } as React.CSSProperties;
 
     return (
@@ -51,18 +52,17 @@ class Skill {
 }
 
 function renderSkill(skill: Skill) {
-    return <article className={'skill'} key={skill.name}>
+    return <div className={'skill'} key={skill.name}>
         <div className={'skill-name'}>
             {skill.icon}
             <span>{skill.name} </span>
         </div>
         <Stars value={skill.stars} description={skill.starsDescription}/>
-    </article>;
+    </div>;
 }
 
 export function Skills() {
     const skills =
-
         {
             frontend: [
                 new Skill('TypeScript',
@@ -107,6 +107,18 @@ export function Skills() {
                     0.1,
                     '',
                     '2 lata'),
+            ],
+            other:[
+                new Skill('UML',
+                    (<></>),
+                    0.3,
+                    '',
+                    '2+ lata'),
+                new Skill('BPMN',
+                    (<></>),
+                    0.7,
+                    '',
+                    '3+ lat'),
             ]
         };
     return (
@@ -114,8 +126,10 @@ export function Skills() {
             {skills.frontend.map(skill =>
                 renderSkill(skill)
             )}
-            <br/>
             {skills.backend.map(skill =>
+                renderSkill(skill)
+            )}
+            {skills.other.map(skill =>
                 renderSkill(skill)
             )}
         </div>

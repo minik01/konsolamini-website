@@ -25,7 +25,7 @@ export function Experience() {
                 <article key={company.id} id={company.id}>
                     <div>
 
-                        <h2>{translate('experience.' + company.id + '.title')}</h2>
+                        <h3>{translate('experience.' + company.id + '.title')}</h3>
                         <div className={'dot'}/>
 
                         <span className={'time'}>
