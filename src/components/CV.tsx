@@ -16,15 +16,14 @@ export function CV() {
             <div className={'header-panel header-panel-placeholder'}>
                 <h1>&nbsp;</h1>
             </div>
-            <div>
-                <div className={'photo'}>
-                    <picture>
-                        <img src="me.png" alt={'my photo'}/>
-                    </picture>
-                </div>
-            </div>
+
             <div id={'main'}>
                 <div className={'panel-1'}>
+                    <div className={'photo'}>
+                        <picture>
+                            <img src="me.png" alt={'my photo'}/>
+                        </picture>
+                    </div>
                     <article id={"basic-info"}>
                         <h2>{translate('common.contact')}</h2>
                         <p>

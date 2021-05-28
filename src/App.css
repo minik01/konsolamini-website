@@ -127,28 +127,27 @@ article > * {
 
 @media screen and (min-width: 992px) {
     #main {
-        display: flex;
+        display: inline-flex;
         flex-flow: row;
     }
 
     .panel-1 {
-        background-color: var(--light-shades);
         display: flex;
-        flex-flow: wrap;
-
+        flex-flow: wrap column;
+        background-color: var(--light-shades);
+        padding: 0 0 6rem 6rem;
     }
 
     .panel-2 {
-        background-color: var(--light-shades);
+        /*background-color: var(--light-shades);*/
         display: flex;
-        /*flex-flow: column wrap;*/
-        flex-flow: wrap;
-        /*display: grid;*/
-        /*grid-template-columns: calc(var(--golden-ratio-small) * 100%) auto;*/
-        /*grid-gap: var(--margin-big);*/
+        flex-flow: wrap column;
+        padding: var(--margin-big);
+
     }
 
     article {
+        /*padding: var(--margin-big);*/
         display: inline-block;
         width: 100%;
     }
@@ -160,34 +159,33 @@ article > * {
     }
 
     .header-panel-placeholder {
-        position: relative;
+        position: static;
     }
 
 
     /*PHOTO*/
     .photo {
-        /*padding: 2rem;*/
-        /*margin-left: -2rem;*/
-        max-width: min(calc(var(--margin-big) * 5), 200px);
-        z-index: 3;
+        padding: calc(2 * var(--margin-big));
+        margin-left: calc(-2* var(--margin-big));
+        max-width: 80%;
     }
 
     picture {
         display: contents;
-        margin: calc(var(--margin-big));
+        margin: var(--margin-big);
     }
 
     picture > * {
         border-radius: 50%;
     }
 
-    #skills {
-        grid-area: 2 / 1;
+    #main {
+        margin-bottom: var(--margin-big);
     }
+}
 
-    #languages {
-        grid-area: 3 / 1;
-    }
+
+@media screen and (min-width: 1201px) {
 
 }
 
