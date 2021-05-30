@@ -1,3 +1,5 @@
+/*@import "widescreen.css" screen and (min-width: 992px);*/
+
 :root {
     --light-shades: hsl(52, 44%, 93%);
     --light-accent: hsl(29, 81%, 61%);
@@ -97,26 +99,26 @@ picture > * {
     flex-flow: column;
 }
 
-#experience article div {
+:is(#experience, #education) article div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#experience h3 {
+:is(#experience, #education) h3 {
     flex-shrink: 0;
     margin: 0;
     width: max-content;
 }
 
-#experience article div.dot {
+:is(#experience, #education) article div.dot {
     border-bottom: var(--dark-shades) 1px dotted;
     margin: var(--margin-small);
     height: 50%;
     width: 100%;
 }
 
-#experience .time {
+:is(#experience, #education) .time {
     margin-right: var(--margin-big);
     flex-shrink: 0;
 }
@@ -125,107 +127,3 @@ article > * {
     padding-left: var(--margin-small);
 }
 
-@media screen and (min-width: 992px) {
-    #main {
-        display: inline-flex;
-        flex-flow: row;
-    }
-
-    .panel-1 {
-        display: flex;
-        flex-flow: wrap column;
-        background-color: var(--light-shades);
-        padding: 0 0 var(--margin-big) var(--margin-big);
-    }
-
-    .panel-2 {
-        display: flex;
-        flex-flow: wrap column;
-        padding: var(--margin-big);
-
-    }
-
-    article {
-        display: inline-block;
-        width: 100%;
-    }
-
-    .header-panel {
-        position: fixed;
-        z-index: 3;
-        width: 100%;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-    }
-
-    .header-panel-placeholder {
-        position: static;
-        background-color: var(--main-color);
-        box-shadow: none;
-
-    }
-
-
-    /*PHOTO*/
-    .photo {
-        padding: var(--margin-big);
-        margin-right: var(--margin-big);
-    }
-
-    picture {
-        display: contents;
-        margin: var(--margin-big);
-    }
-
-    picture > * {
-        border-radius: 50%;
-    }
-
-    #main {
-        margin-bottom: var(--margin-big);
-    }
-}
-
-@media print {
-    .outline-star, #experience article div.dot {
-        display: none;
-        border: none;
-    }
-
-    .hide-on-print {
-        display: none !important;
-    }
-
-    #skills-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: var(--margin-big);
-    }
-
-    .photo {
-        width: 80%;
-    }
-
-    picture, .img {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-    }
-
-    #basic-info {
-        grid-column: 2 / span 2;
-    }
-
-    #skills, #languages {
-        grid-column: 1 / span 3;
-    }
-
-    article > h2 {
-        /*border: #aa4422 solid 1px;*/
-        margin: 0 0 0;
-    }
-
-    .panel-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}

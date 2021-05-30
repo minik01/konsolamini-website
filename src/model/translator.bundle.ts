@@ -25,10 +25,11 @@ currentLang!.set('common.languages', 'języki');
 
 
 currentLang!.set('education.title', 'wykształcenie');
-currentLang!.set('education.mgr', 'Magister informatyki');
-currentLang!.set('education.mgr.details', 'Politechnika Wrocławska');
-currentLang!.set('education.engineer', 'Inżynier teleinformatyki');
-currentLang!.set('education.engineer.details', 'Zachodniopomorski Uniwersytet Technologiczny');
+currentLang!.set('experience.mgr.title', 'Politechnika Wrocławska');
+currentLang!.set('experience.mgr.content', 'Magister informatyki – specjalność Systemy Informacyjne');
+
+currentLang!.set('experience.engineer.title', 'Zachodniopomorski Uniwersytet Technologiczny');
+currentLang!.set('experience.engineer.content', 'Inżynier teleinformatyki');
 
 currentLang!.set('experience.title', 'doświadczenie');
 currentLang!.set('experience.unit4.title', 'Unit4');
@@ -38,7 +39,7 @@ currentLang!.set('experience.konsolamini.title', 'Konsolamini');
 currentLang!.set('experience.konsolamini.content', 'W marcu 2019 założyłem działalność gospodarczą.');
 
 currentLang!.set('experience.bv.title', 'blue veery');
-currentLang!.set('experience.bv.content', 'Jako Full-stack developer: projekty pisane w Angular (4-8), React Native i Spring.');
+currentLang!.set('experience.bv.content', 'Jako Full-stack developer: projekty tworzone w Angular (4-8), React Native i Spring.');
 
 
 

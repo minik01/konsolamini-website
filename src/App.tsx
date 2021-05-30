@@ -1,5 +1,7 @@
 import React from 'react';
-import './App.css';
+import './styles/default.css';
+import './styles/widescreen.css';
+import './styles/print.css';
 import {CV} from "./components/CV";
 
 function App() {

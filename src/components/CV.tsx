@@ -1,7 +1,9 @@
-import {Experience} from "./cv/Experience";
+// import {Experience} from "./cv/Experience";
 import {Skills} from "./cv/Skills";
 import {translate} from "../TranslatePipe";
 import React from "react";
+import {Company, ExperienceList} from "./cv/ExperienceList";
+import {Experience} from "./cv/Experience";
 
 
 export function CV() {
@@ -47,12 +49,12 @@ export function CV() {
                 <div className={"panel-2"}>
                     <article>
                         <h2>{translate('experience.title')}</h2>
-                        <Experience/>
+                        <ExperienceList/>
                     </article>
-                    <article>
+                    <article id={'education'}>
                         <h2>{translate('education.title')}</h2>
-                        <h5>{translate('education.mgr')}</h5>
-                        <h5>{translate('education.engineer')}</h5>
+                        <Experience company={new Company('mgr', new Date('October 1 2016'), new Date('March 31 2019'))}/>
+                        <Experience company={new Company('engineer', new Date('October 1 2012'), new Date('March 31 2016'))}/>
                     </article>
                 </div>
             </div>

@@ -1,0 +1,44 @@
+@media print {
+    .outline-star, #experience article div.dot {
+        display: none;
+        border: none;
+    }
+
+    .hide-on-print {
+        display: none !important;
+    }
+
+    #skills-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: var(--margin-big);
+    }
+
+    .photo {
+        width: 80%;
+    }
+
+    picture, .img {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    #basic-info {
+        grid-column: 2 / span 2;
+    }
+
+    #skills, #languages {
+        grid-column: 1 / span 3;
+    }
+
+    article > h2 {
+        /*border: #aa4422 solid 1px;*/
+        margin: 0 0 0;
+    }
+
+    .panel-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
