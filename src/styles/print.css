@@ -33,12 +33,16 @@
     }
 
     article > h2 {
-        /*border: #aa4422 solid 1px;*/
+        color: var(--dark-shades);
         margin: 0 0 0;
     }
 
     .panel-1 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    a, a :link, a :hover, a :visited {
+        color: var(--dark-shades);
     }
 }

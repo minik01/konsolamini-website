@@ -1,13 +1,13 @@
-// import {Experience} from "./cv/Experience";
 import {Skills} from "./cv/Skills";
 import {translate} from "../TranslatePipe";
 import React from "react";
-import {Company, ExperienceList} from "./cv/ExperienceList";
-import {Experience} from "./cv/Experience";
+import {ExperienceList} from "./cv/ExperienceList";
+import {MyPhoto} from "./cv/MyPhoto";
+import {BasicInfo} from "./cv/BasicInfo";
+import { Education } from "./cv/Education";
 
 
 export function CV() {
-
     return (
         <>
             <div className={'header-panel reversed-colors'} id={'my-name'}>
@@ -28,20 +28,13 @@ export function CV() {
                         </picture>
                     </div>
                     <article id={"basic-info"}>
-                        <h2>{translate('common.contact')}</h2>
-                        <p>
-                            E-mail:&nbsp;konsolamini@gmail.com
-                            telefon:&nbsp;736 77 22 65
-                            Data&nbsp;urodzenia:&nbsp;18.03.1993
-                        </p>
+                        <BasicInfo/>
                     </article>
                     <article id={"skills"}>
-                        <h2>{translate('common.skills')}</h2>
                         <Skills/>
                     </article>
                     <article id={"languages"}>
                         <h2>{translate('common.languages')}</h2>
-
                         <div className={'language'}>Polski C2</div>
                         <div className={'language'}>Angielski B2</div>
                     </article>
@@ -52,12 +45,11 @@ export function CV() {
                         <ExperienceList/>
                     </article>
                     <article id={'education'}>
-                        <h2>{translate('education.title')}</h2>
-                        <Experience company={new Company('mgr', new Date('October 1 2016'), new Date('March 31 2019'))}/>
-                        <Experience company={new Company('engineer', new Date('October 1 2012'), new Date('March 31 2016'))}/>
+                       <Education/>
                     </article>
                 </div>
             </div>
+            <br/>
         </>
     )
 }

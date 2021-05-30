@@ -10,6 +10,7 @@ import {
     SiTypescript
 } from "react-icons/all";
 import React from "react";
+import {translate} from "../../TranslatePipe";
 
 function Stars(props: { value: number, description: string }) {
     const outletStarsStyle = {position: "absolute"} as React.CSSProperties;
@@ -108,7 +109,7 @@ export function Skills() {
                     '',
                     '2 lata'),
             ],
-            other:[
+            other: [
                 new Skill('UML',
                     (<></>),
                     0.3,
@@ -122,16 +123,19 @@ export function Skills() {
             ]
         };
     return (
-        <div id={'skills-list'}>
-            {skills.frontend.map(skill =>
-                renderSkill(skill)
-            )}
-            {skills.backend.map(skill =>
-                renderSkill(skill)
-            )}
-            {skills.other.map(skill =>
-                renderSkill(skill)
-            )}
-        </div>
+        <>
+            <h2>{translate('common.skills')}</h2>
+            <div id={'skills-list'}>
+                {skills.frontend.map(skill =>
+                    renderSkill(skill)
+                )}
+                {skills.backend.map(skill =>
+                    renderSkill(skill)
+                )}
+                {skills.other.map(skill =>
+                    renderSkill(skill)
+                )}
+            </div>
+        </>
     );
 }

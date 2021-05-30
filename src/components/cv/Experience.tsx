@@ -4,7 +4,7 @@ import {Company} from "./ExperienceList";
 export function Experience(props: { company: Company }) {
     const company = props.company;
     return <article key={company.id} id={company.id}>
-        <div>
+        <div className={'experience'}>
             <h3>{translate('experience.' + company.id + '.title')}</h3>
             <div className={'dot'}/>
 

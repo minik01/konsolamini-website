@@ -22,7 +22,7 @@ export function ExperienceList() {
     ];
     return (
         <div id={'experience'}>
-            {exp.map(company => <Experience company={company}/>)}
+            {exp.map(company => <Experience key={company.id} company={company}/>)}
 
         </div>
     )

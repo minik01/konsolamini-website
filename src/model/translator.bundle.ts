@@ -41,6 +41,9 @@ currentLang!.set('experience.konsolamini.content', 'W marcu 2019 założyłem dz
 currentLang!.set('experience.bv.title', 'blue veery');
 currentLang!.set('experience.bv.content', 'Jako Full-stack developer: projekty tworzone w Angular (4-8), React Native i Spring.');
 
+// currentLang!.set('info.mail', 'konsolamini@gmail.com');
+
+
 
 
 export default translationBundle;

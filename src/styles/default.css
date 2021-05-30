@@ -7,11 +7,6 @@
     --dark-accent: hsl(14, 23%, 35%);
     --dark-shades: hsl(235, 10%, 25%);
 
-
-    --accent: var(--dark-accent);
-    --constrast-1: var(--dark-shades);
-    --constrast-2: var(--main-color);
-
     --margin-small: 0.2rem;
     --margin-medium: 1rem;
     --margin-big: 2rem;
@@ -99,31 +94,35 @@ picture > * {
     flex-flow: column;
 }
 
-:is(#experience, #education) article div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-:is(#experience, #education) h3 {
+.experience h3 {
     flex-shrink: 0;
     margin: 0;
     width: max-content;
 }
 
-:is(#experience, #education) article div.dot {
+.experience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience div.dot {
     border-bottom: var(--dark-shades) 1px dotted;
     margin: var(--margin-small);
     height: 50%;
     width: 100%;
 }
 
-:is(#experience, #education) .time {
+.experience .time {
     margin-right: var(--margin-big);
     flex-shrink: 0;
 }
 
 article > * {
     padding-left: var(--margin-small);
+}
+
+a, a :link, a :hover, a :visited {
+    color: var(--dark-accent);
 }
 
