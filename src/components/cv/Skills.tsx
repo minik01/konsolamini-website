@@ -27,10 +27,10 @@ function Stars(props: { value: number, description: string }) {
 
     return (
         <>
-            <div style={outletStarsStyle}>
+            <div className={'outline-star'} style={outletStarsStyle}>
                 <AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/>
             </div>
-            <div style={filledStarsOuterStyle} title={props.description}>
+            <div className={'filled-star'} style={filledStarsOuterStyle} title={props.description}>
                 <div style={{
                     width: (props.value * 100) + '%',
                     ...filledStarsInnerStyle
@@ -122,7 +122,7 @@ export function Skills() {
             ]
         };
     return (
-        <div id={'skills'}>
+        <div id={'skills-list'}>
             {skills.frontend.map(skill =>
                 renderSkill(skill)
             )}

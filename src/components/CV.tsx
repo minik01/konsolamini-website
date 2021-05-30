@@ -19,6 +19,7 @@ export function CV() {
 
             <div id={'main'}>
                 <div className={'panel-1'}>
+
                     <div className={'photo'}>
                         <picture>
                             <img src="me.png" alt={'my photo'}/>

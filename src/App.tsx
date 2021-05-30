@@ -3,6 +3,7 @@ import './App.css';
 import {CV} from "./components/CV";
 
 function App() {
+    document.title = 'CV – Dominik Wojnar – konsolamini.com';
     return (
         <div className="App">
             <CV/>
