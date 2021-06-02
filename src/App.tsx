@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/default.css';
+import './styles/smallscreen.css';
 import './styles/widescreen.css';
 import './styles/print.css';
 import {CV} from "./components/CV";

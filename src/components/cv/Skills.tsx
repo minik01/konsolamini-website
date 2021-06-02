@@ -47,7 +47,7 @@ class Skill {
     constructor(public readonly name: string,
                 public readonly icon: JSX.Element,
                 public readonly stars: number,
-                public readonly starsDescription: string,
+                public readonly exampleLink: string,
                 public readonly experience: string) {
     }
 }
@@ -58,7 +58,7 @@ function renderSkill(skill: Skill) {
             {skill.icon}
             <span>{skill.name} </span>
         </div>
-        <Stars value={skill.stars} description={skill.starsDescription}/>
+        <Stars value={skill.stars} description={skill.exampleLink}/>
     </div>;
 }
 
@@ -88,13 +88,13 @@ export function Skills() {
                     '3+ lat'),
                 new Skill('React',
                     (<FaReact/>),
-                    0.8,
-                    'kurs na Udemy, biblioteki do zarządzania stanem aplikacji',
+                    0.5,
+                    'https://github.com/minik01/typed-modeler/blob/master/src/components/ModelManager.tsx',
                     '3+ lat'),
                 new Skill('Karma/Jsamine',
                     (<GiJasmine/>),
                     0.3,
-                    'podstawowe testowanie, mockowanie serwisów i metod',
+                    'https://gitlab.com/dominik.wojnar/colorful-matrix-code/-/blob/cmc-003-compresion/src/Compression/Compressor.test.ts',
                     '1 rok'),
             ],
             backend: [
