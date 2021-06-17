@@ -1,6 +1,6 @@
 import {
     AiFillStar,
-    AiOutlineStar,
+    AiOutlineStar, BsInfoSquare,
     FaAngular,
     FaJava,
     FaJs,
@@ -11,6 +11,7 @@ import {
 } from "react-icons/all";
 import React from "react";
 import {translate} from "../../TranslatePipe";
+import {A} from "../A";
 
 function Stars(props: { value: number, description: string }) {
     const outletStarsStyle = {position: "absolute"} as React.CSSProperties;
@@ -54,11 +55,13 @@ class Skill {
 
 function renderSkill(skill: Skill) {
     return <div className={'skill'} key={skill.name}>
-        <div className={'skill-name'}>
-            {skill.icon}
-            <span>{skill.name} </span>
-        </div>
-        <Stars value={skill.stars} description={skill.exampleLink}/>
+        <A href={skill.exampleLink}>
+            <div className={'skill-name'}>
+                {skill.icon}
+                <span>{skill.name} </span>
+            </div>
+            <Stars value={skill.stars} description={''}/>
+        </A>
     </div>;
 }
 
@@ -69,17 +72,17 @@ export function Skills() {
                 new Skill('TypeScript',
                     (<SiTypescript/>),
                     0.8,
-                    'umiem dużo pożytecznych rzeczy, z bardzo zaawansowanych konstrukcji nie korzystam',
+                    '',
                     '3+ lat'),
                 new Skill('JavaScript',
                     (<FaJs/>),
                     0.5,
-                    'jak korzystać z Symbol, generatory, kontekst funkcji (bind, apply, call)',
+                    '',
                     '1 rok'),
                 new Skill('CSS',
                     (<SiCss3/>),
                     0.5,
-                    'animacje, pseudoklasy',
+                    'https://github.com/minik01/konsolamini-website/tree/master/src/styles',
                     '3+ lat'),
                 new Skill('Angular',
                     (<FaAngular/>),
@@ -101,7 +104,7 @@ export function Skills() {
                 new Skill('Java',
                     (<FaJava/>),
                     0.5,
-                    'czym jest finalize, czy domyślnie nowe programy są dołączane do istniejącego JVM, czy jest tworzony osobny proces, słabo sobie radzę z wielowątkowością, średnio ze wzorcami projektowymi, czym jest Bean',
+                    '',
                     '3+ lat'),
                 new Skill('Spring',
                     (<SiSpring/>),
@@ -124,7 +127,10 @@ export function Skills() {
         };
     return (
         <>
-            <h2>{translate('common.skills')}</h2>
+            <h2>
+                {translate('common.skills')}
+                <BsInfoSquare className={'hide-on-print'} title={translate('common.click-on-element')}/>
+            </h2>
             <div id={'skills-list'}>
                 {skills.frontend.map(skill =>
                     renderSkill(skill)

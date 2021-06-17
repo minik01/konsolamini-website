@@ -17,6 +17,7 @@ currentLang!.set('month.10', 'październik');
 currentLang!.set('month.11', 'listopad');
 currentLang!.set('month.12', 'grudzień');
 currentLang!.set('common.present', 'aktualnie');
+currentLang!.set('common.click-on-element', 'Każdej technologię opatrzyłem subiektywną ocenę znajomości, biorąc pod uwagę różną złożoność technologii. Przykładowo Angular – pomimo codziennej pracy w tym frameworku mam jeszcze sporo do nauki. Dołączam linki do gita, aby łatwiej zobrazować jak wygląda mój kod.');
 
 currentLang!.set('common.skills', 'umiejętności');
 

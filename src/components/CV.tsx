@@ -35,7 +35,7 @@ export function CV() {
                     </article>
                     <article id={"languages"}>
                         <h2>{translate('common.languages')}</h2>
-                        <div className={'language'}>Polski C2</div>
+                        <div className={'language'}>Polski native</div>
                         <div className={'language'}>Angielski B2</div>
                     </article>
                 </div>
