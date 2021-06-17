@@ -23,6 +23,13 @@
         width: 100%;
     }
 
+    article > h2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: var(--margin-medium);
+    }
+
     .header-panel {
         position: fixed;
         z-index: 3;
@@ -32,7 +39,7 @@
 
     .header-panel-placeholder {
         position: static;
-        background-color: var(--main-color);
+        background-color: var(--light-shades);
         box-shadow: none;
     }
 

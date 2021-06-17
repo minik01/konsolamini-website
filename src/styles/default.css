@@ -1,9 +1,18 @@
 :root {
-    --light-shades: hsl(52, 44%, 93%);
-    --light-accent: hsl(29, 81%, 61%);
-    --main-color: hsl(11, 9%, 98%);
-    --dark-accent: hsl(14, 23%, 35%);
-    --dark-shades: hsl(235, 10%, 25%);
+    --accent-hue: 25;
+    --shades-hue: 30;
+    --light-lightness: 80%;
+    --dark-lightness: 25%;
+    --accent-saturation: 80%;
+    --shades-saturation: 20%;
+
+    --light-accent: hsl(var(--accent-hue), var(--accent-saturation), var(--light-lightness));
+    --dark-accent: hsl(var(--accent-hue), var(--accent-saturation), var(--dark-lightness));
+
+    --dark-shades: hsl(var(--shades-hue), var(--shades-saturation), var(--dark-lightness));
+    --light-shades: hsl(var(--shades-hue), var(--shades-saturation), var(--light-lightness));
+
+    --main-color: hsl(var(--shades-hue), 10%, 90%);
 
     --margin-small: 0.2rem;
     --margin-medium: 1rem;
@@ -13,15 +22,28 @@
     --golden-ratio-big: 0.61803;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+    :root{
+        --light-lightness: 20%;
+        --dark-lightness: 80%;
+        --main-color: hsl(var(--shades-hue), 10%, 10%);
+
+    }
+}
+
+.filled-star svg {
+    color: var(--dark-accent);
+}
+
 html {
     overflow: auto;
 }
 
 body {
-    background-color: var(--constrast-2);
+    background-color: var(--main-color);
     font-family: 'Montserrat', sans-serif;
     overflow-y: paged-x;
-
+    color: var(--dark-shades);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,15 +51,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-.accent-bg {
-    background-color: var(--accent);
-    color: var(--constrast-2);
-}
-
 article > h2 {
     margin-bottom: var(--margin-small);
 }
-
 
 .no-color {
     filter: grayscale(100%);

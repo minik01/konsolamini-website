@@ -1,4 +1,24 @@
 @media print {
+    :root {
+        --accent-hue: 0;
+        --shades-hue: 0;
+        --light-lightness: 100%;
+        --dark-lightness: 0%;
+        --accent-saturation: 100%;
+        --shades-saturation: 100%;
+        --main-color: white;
+    }
+
+    body {
+        background-color: var(--main-color);
+        font-family: 'Montserrat', sans-serif;
+        overflow-y: paged-x;
+    }
+
+    .reversed-colors, h2 {
+        background-color: var(--light-shades);
+    }
+
     .outline-star, #experience article div.dot {
         display: none;
         border: none;
