@@ -132,3 +132,8 @@ a, a :link, a :hover, a :visited {
     color: var(--dark-accent);
 }
 
+#rodo {
+    margin: 0 var(--margin-big);
+    font-style: italic;
+}
+

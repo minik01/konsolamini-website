@@ -66,4 +66,8 @@
     a, a :link, a :hover, a :visited {
         color: var(--dark-shades);
     }
+
+    #rodo {
+        margin: 0;
+    }
 }

@@ -2,4 +2,12 @@
     body {
         overflow-x: hidden;
     }
+
+    .dot {
+        display: none
+    }
+
+    .experience {
+        display: block
+    }
 }

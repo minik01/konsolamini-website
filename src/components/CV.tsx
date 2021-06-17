@@ -49,7 +49,7 @@ export function CV() {
                     </article>
                 </div>
             </div>
-            <div>{translate('common.RODO')}</div>
+            <div id={'rodo'}>{translate('common.RODO')}</div>
             <br/>
         </>
     )
