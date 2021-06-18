@@ -16,9 +16,9 @@ export class Company {
 
 export function ExperienceList() {
     const exp = [
-        new Company('unit4', new Date('March 31 2020'), null,),
+        new Company('unit4', new Date('May 1 2020'), null,),
         new Company('konsolamini', new Date('March 20 2019'), null,),
-        new Company('bv', new Date('Jan 1 2018'), new Date('March 31 2020'),),
+        new Company('bv', new Date('Jan 1 2018'), new Date('April 31 2020'),),
     ];
     return (
         <div id={'experience'}>
