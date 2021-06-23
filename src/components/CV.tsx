@@ -1,19 +1,23 @@
 import {Skills} from "./cv/Skills";
-import {translate} from "../TranslatePipe";
-import React from "react";
+import {currentLanguage, translate} from "../TranslatePipe";
+import React, {useEffect} from "react";
 import {ExperienceList} from "./cv/ExperienceList";
-import {MyPhoto} from "./cv/MyPhoto";
 import {BasicInfo} from "./cv/BasicInfo";
-import { Education } from "./cv/Education";
+import {Education} from "./cv/Education";
+import {LanguageChooser} from "./cv/LanguageChooser";
 
 
 export function CV() {
+    useEffect(() => {
+        console.log(currentLanguage)
+    }, [currentLanguage]);
     return (
         <>
             <div className={'header-panel reversed-colors'} id={'my-name'}>
                 <div/>
                 <h1>Dominik Wojnar</h1>
                 <div/>
+                <LanguageChooser/>
             </div>
             <div className={'header-panel header-panel-placeholder'}>
                 <h1>&nbsp;</h1>
@@ -45,7 +49,7 @@ export function CV() {
                         <ExperienceList/>
                     </article>
                     <article id={'education'}>
-                       <Education/>
+                        <Education/>
                     </article>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 :root {
     --accent-hue: 25;
     --shades-hue: 30;
-    --light-lightness: 80%;
-    --dark-lightness: 25%;
+    --light-lightness: 85%;
+    --dark-lightness: 15%;
     --accent-saturation: 80%;
     --shades-saturation: 20%;
 
@@ -12,7 +12,7 @@
     --dark-shades: hsl(var(--shades-hue), var(--shades-saturation), var(--dark-lightness));
     --light-shades: hsl(var(--shades-hue), var(--shades-saturation), var(--light-lightness));
 
-    --main-color: hsl(var(--shades-hue), 10%, 90%);
+    --main-color: hsl(var(--shades-hue), 10%, 95%);
 
     --margin-small: 0.2rem;
     --margin-medium: 1rem;
@@ -23,7 +23,7 @@
 }
 
 @media screen and (prefers-color-scheme: dark) {
-    :root{
+    :root {
         --light-lightness: 20%;
         --dark-lightness: 80%;
         --main-color: hsl(var(--shades-hue), 10%, 10%);
@@ -75,7 +75,7 @@ article > h2 {
     /*padding: calc(var(--margin-big) * 1.2);*/
     /*width: 100%;*/
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .header-panel h1 {
@@ -110,6 +110,7 @@ picture > * {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: var(--margin-big);
 }
 
 .experience div.dot {
@@ -120,12 +121,18 @@ picture > * {
 }
 
 .experience .time {
-    margin-right: var(--margin-big);
     flex-shrink: 0;
 }
 
 article > * {
     padding-left: var(--margin-small);
+}
+
+article > h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: var(--margin-medium);
 }
 
 a, a :link, a :hover, a :visited {
@@ -137,3 +144,30 @@ a, a :link, a :hover, a :visited {
     font-style: italic;
 }
 
+#lang-selector {
+    position: absolute;
+    right: var(--margin-small);
+    top: var(--margin-small);
+}
+
+#lang-selector select {
+
+    padding: var(--margin-medium) var(--margin-medium);
+
+    /*appearance: none;*/
+    box-shadow: none;
+    border: 0;
+}
+
+.select-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    background-color: var(--dark-shades);
+    color: var(--light-shades);
+}

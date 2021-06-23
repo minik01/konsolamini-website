@@ -1,17 +1,13 @@
 import {
     AiFillStar,
-    AiOutlineStar, BsInfoSquare,
-    FaAngular,
-    FaJava,
-    FaJs,
-    FaReact,
-    GiJasmine, SiCss3,
-    SiSpring,
-    SiTypescript
+    AiOutlineStar,
+    BsInfoSquare
 } from "react-icons/all";
 import React from "react";
 import {translate} from "../../TranslatePipe";
 import {A} from "../A";
+import {Technology} from "../Technology";
+import {TechnologyType} from "./technologyFactory";
 
 function Stars(props: { value: number, description: string }) {
     const outletStarsStyle = {position: "absolute"} as React.CSSProperties;
@@ -45,21 +41,20 @@ function Stars(props: { value: number, description: string }) {
 }
 
 class Skill {
-    constructor(public readonly name: string,
-                public readonly icon: JSX.Element,
+    public name = '';
+
+    constructor(public readonly type: TechnologyType,
                 public readonly stars: number,
                 public readonly exampleLink: string,
                 public readonly experience: string) {
+        this.name = TechnologyType[type];
     }
 }
 
 function renderSkill(skill: Skill) {
     return <div className={'skill'} key={skill.name}>
         <A href={skill.exampleLink}>
-            <div className={'skill-name'}>
-                {skill.icon}
-                <span>{skill.name} </span>
-            </div>
+            <Technology type={skill.type}/>
             <Stars value={skill.stars} description={''}/>
         </A>
     </div>;
@@ -69,57 +64,47 @@ export function Skills() {
     const skills =
         {
             frontend: [
-                new Skill('TypeScript',
-                    (<SiTypescript/>),
+                new Skill(TechnologyType.TYPESCRIPT,
                     0.8,
                     '',
                     '3+ lat'),
-                new Skill('JavaScript',
-                    (<FaJs/>),
+                new Skill(TechnologyType.JAVASCRIPT,
                     0.5,
                     '',
                     '1 rok'),
-                new Skill('CSS',
-                    (<SiCss3/>),
+                new Skill(TechnologyType.CSS,
                     0.5,
                     'https://github.com/minik01/konsolamini-website/tree/master/src/styles',
                     '3+ lat'),
-                new Skill('Angular',
-                    (<FaAngular/>),
+                new Skill(TechnologyType.ANGULAR,
                     0.6,
                     '',
                     '3+ lat'),
-                new Skill('React',
-                    (<FaReact/>),
+                new Skill(TechnologyType.REACT,
                     0.5,
                     'https://github.com/minik01/typed-modeler/blob/master/src/components/ModelManager.tsx',
                     '3+ lat'),
-                new Skill('Karma/Jsamine',
-                    (<GiJasmine/>),
+                new Skill(TechnologyType.KARMA,
                     0.3,
                     'https://gitlab.com/dominik.wojnar/colorful-matrix-code/-/blob/cmc-003-compresion/src/Compression/Compressor.test.ts',
                     '1 rok'),
             ],
             backend: [
-                new Skill('Java',
-                    (<FaJava/>),
+                new Skill(TechnologyType.JAVA,
                     0.5,
                     '',
                     '3+ lat'),
-                new Skill('Spring',
-                    (<SiSpring/>),
+                new Skill(TechnologyType.SPRING,
                     0.1,
                     '',
                     '2 lata'),
             ],
             other: [
-                new Skill('UML',
-                    (<></>),
+                new Skill(TechnologyType.UML,
                     0.3,
                     '',
                     '2+ lata'),
-                new Skill('BPMN',
-                    (<></>),
+                new Skill(TechnologyType.BPMN,
                     0.7,
                     '',
                     '3+ lat'),
