@@ -2,21 +2,22 @@ import {translate} from "../../TranslatePipe";
 import React from "react";
 import {AiFillGithub, AiFillGitlab} from "react-icons/ai";
 import {A} from "../A";
+import {FaPhoneAlt, MdEmail} from "react-icons/all";
 
 export function BasicInfo() {
     const mail = 'konsolamini@gmail.com';
-    const tel = '736 77 22 65';
+    const tel = '+48 736 77 22 65';
     return <>
         <h2>{translate('common.contact')}</h2>
         <div>
             <div>
-                E-mail:&nbsp;<A href={'mailTo:' + mail}>{mail}</A>
+                <A href={'mailTo:' + mail}> <MdEmail/>&nbsp;{mail}</A>
             </div>
             <div>
-                telefon:&nbsp;<A href={'tel:' + tel}>{tel}</A>
+                <A href={'tel:' + tel}><FaPhoneAlt/>&nbsp;{tel}</A>
             </div>
             <div>
-                Data&nbsp;urodzenia:&nbsp;18.03.1993
+                {translate('common.birth')}:&nbsp;18.03.1993
             </div>
             <div className={'hide-on-print'}>
                 Git:&nbsp;

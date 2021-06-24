@@ -1,4 +1,4 @@
-import {translate} from "../../TranslatePipe";
+import {currentLanguage, translate} from "../../TranslatePipe";
 import {Company} from "./ExperienceList";
 import {Technology} from "../Technology";
 
@@ -17,8 +17,9 @@ export function Experience(props: { company: Company }) {
             {props.company.stack?.map(t => <Technology key={t} type={t}/>)}
         </div>
         <p>{translate('experience.' + company.id + '.content')}</p>
-        <ul className={'hide-on-print'}>
-            {props.company.responsibilities?.map((responsibility: string, i: number) => <li key={i}>{responsibility}</li>)}
-        </ul>
+        {currentLanguage === 'pl' ? <ul className={'hide-on-print'}>
+            {props.company.responsibilities?.map((responsibility: string, i: number) => <li
+                key={i}>{responsibility}</li>)}
+        </ul> : <></>}
     </article>
 }

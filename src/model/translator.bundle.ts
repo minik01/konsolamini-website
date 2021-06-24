@@ -3,6 +3,7 @@
  */
 const translationBundle = new Map<string, Map<any, any>>();
 translationBundle.set('pl', new Map());
+translationBundle.set('en', new Map());
 let currentLang = translationBundle.get('pl');
 currentLang!.set('month.1', 'styczeń');
 currentLang!.set('month.2', 'luty');
@@ -43,7 +44,56 @@ currentLang!.set('experience.konsolamini.content', 'W marcu 2019 założyłem dz
 currentLang!.set('experience.bv.title', 'blue veery');
 currentLang!.set('experience.bv.content', 'Jako Full-stack developer: projekty tworzone w Angular (4-8), React Native i Spring.');
 
+currentLang!.set('common.birth', 'Data urodzenia');
+currentLang!.set('lang.pl', 'Polski');
+currentLang!.set('lang.en', 'Angielski');
+
+//===================================== EN
+
+currentLang = translationBundle.get('en');
+currentLang!.set('month.1', 'January');
+currentLang!.set('month.2', 'February');
+currentLang!.set('month.3', 'March');
+currentLang!.set('month.4', 'April');
+currentLang!.set('month.5', 'May');
+currentLang!.set('month.6', 'June');
+currentLang!.set('month.7', 'July');
+currentLang!.set('month.8', 'August');
+currentLang!.set('month.9', 'September');
+currentLang!.set('month.10', 'October');
+currentLang!.set('month.11', 'November');
+currentLang!.set('month.12', 'December');
+currentLang!.set('common.present', 'currently');
+
+currentLang!.set('common.RODO', 'I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament\'s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)');
+currentLang!.set('common.click-on-element', 'Each technology has a subjective assessment of knowledge, taking into account the different complexity of the technology. For example, Angular - despite my daily work in this framework, I still have a lot to learn. I attach links to git, to help you visualize what my code looks like. ');
+
+currentLang!.set('common.skills', 'skills');
+
+currentLang!.set('common.contact', 'contact details');
+currentLang!.set('common.languages', 'languages');
 
 
+currentLang!.set('education.title', 'education');
+currentLang!.set('experience.mgr.title', 'Wrocław University of Technology');
+currentLang!.set('experience.mgr.content', 'Master in Computer Science - specializing in Information Systems');
+
+currentLang!.set('experience.engineer.title', 'West Pomeranian University of Technology');
+currentLang!.set('experience.engineer.content', 'ICT engineer');
+
+currentLang!.set('experience.title', 'experience');
+currentLang!.set('experience.unit4.title', 'Unit4');
+currentLang!.set('experience.unit4.content', 'As a Frontend developer. Angular project. Occasionally Java tasks.');
+
+currentLang!.set('experience.konsolamini.title', 'Konsolamini');
+currentLang!.set('experience.konsolamini.content', 'I started running a business.');
+
+currentLang!.set('experience.bv.title', 'blue veery');
+currentLang!.set('experience.bv.content', 'As a Full-stack developer.');
+
+currentLang!.set('common.birth', 'Date of birth');
+
+currentLang!.set('lang.pl', 'Polish');
+currentLang!.set('lang.en', 'English');
 
 export default translationBundle;

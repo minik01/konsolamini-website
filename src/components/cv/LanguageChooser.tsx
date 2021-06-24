@@ -1,17 +1,17 @@
 import React from "react";
 import {FaCogs} from "react-icons/all";
+import {setCurrentLanguage} from "../../TranslatePipe";
 
-declare var currentLanguage: string;
 
-export function LanguageChooser() {
+export function LanguageChooser(props: { setLanguage: React.Dispatch<React.SetStateAction<string>> }) {
     return (
         <div className={'hide-on-print'} id="lang-selector">
             <select
-                name="cars"
+                name="lang"
                 defaultValue={"PL"}
                 onChange={(event) => {
-                    console.log(event.target.value);
-                    currentLanguage = event.target.value;
+                    setCurrentLanguage(event.target.value);
+                    props.setLanguage(event.target.value)
                 }}>
                 <option value="pl">PL</option>
                 <option value="en">EN</option>
