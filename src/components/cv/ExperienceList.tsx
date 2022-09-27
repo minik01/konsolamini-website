@@ -17,12 +17,27 @@ export class Company {
 
 export function ExperienceList() {
     const exp = [
-            new Company('unit4', new Date('May 1 2020'), null, [
+            new Company('teleste', new Date('September 15 2021'), null, [
+                TechnologyType.ANGULAR,
+                TechnologyType.TYPESCRIPT,
+                TechnologyType.JAVASCRIPT,
+                TechnologyType.SCSS,
+                TechnologyType.SCRUM
+            ], [
+                'Tworzenie kodu wysokiej jakości',
+                'Rozwijanie oprogramowania zgodnie z normami, narzędziami i praktykami branży IT',
+                'Przeprowadzanie Code review',
+                'Branie udziału w backlog refinement oraz szacowaniu',
+                'Prezentowanie zmian na spotkaniach Demo',
+                'Postępowanie zgodne ze standardami i najlepszymi praktykami',
+            ]),
+            new Company('unit4', new Date('May 1 2020'), new Date('September 1 2021'), [
                 TechnologyType.ANGULAR,
                 TechnologyType.TYPESCRIPT,
                 TechnologyType.SCSS,
                 TechnologyType.JAVA,
-                TechnologyType.POSTGRESQL
+                TechnologyType.POSTGRESQL,
+                TechnologyType.SCRUM
             ], [
                 'Tworzenie kodu wysokiej jakości',
                 'Wczesne ostrzeganie przed niemożnością zapewnienia kodu na czas/kodu o odpowiedniej jakości',
@@ -32,7 +47,7 @@ export function ExperienceList() {
                 'Branie aktywnego udziału w codziennych spotkaniach dotyczących postępu oraz planowania iteracji'
             ]),
             new Company('konsolamini', new Date('March 20 2019'), null,),
-            new Company('bv', new Date('Jan 1 2018'), new Date('April 31 2020'),[
+            new Company('bv', new Date('Jan 1 2018'), new Date('April 31 2020'), [
                 TechnologyType.ANGULAR,
                 TechnologyType.TYPESCRIPT,
                 TechnologyType.REACT_NATIVE,
@@ -44,7 +59,6 @@ export function ExperienceList() {
                 'Programowanie front-end oraz back-end',
                 'Branie udziału w planowaniu sprintów i retrospektywach',
                 'W razie konieczności nauka i wykonywanie projektów w językach PHP i Java',
-                'Od czasu do czasu wyjazdy do klienta (Niemcy)'
             ]),
         ]
     ;

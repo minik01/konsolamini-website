@@ -1,12 +1,14 @@
 import {
     DiSass,
+    DiScrum,
     FaAngular,
     FaJava,
     FaJs,
     FaLess,
     FaReact,
     GiJasmine,
-    SiCss3, SiPostgresql,
+    SiCss3,
+    SiPostgresql,
     SiSpring,
     SiTypescript
 } from "react-icons/all";
@@ -26,7 +28,8 @@ export enum TechnologyType {
     SPRING,
     UML,
     BPMN,
-    POSTGRESQL
+    POSTGRESQL,
+    SCRUM
 }
 
 export class SkillName {
@@ -66,5 +69,7 @@ export function technologyFactory(type: TechnologyType): Readonly<SkillName> {
             return new SkillName('BPMN', <> </>);
         case TechnologyType.POSTGRESQL:
             return new SkillName('postgresql', <SiPostgresql></SiPostgresql>)
+        case TechnologyType.SCRUM:
+            return new SkillName('Scrum', <DiScrum></DiScrum>)
     }
 }

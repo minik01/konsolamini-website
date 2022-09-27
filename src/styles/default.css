@@ -42,7 +42,7 @@ html {
 body {
     background-color: var(--main-color);
     font-family: 'Montserrat', sans-serif;
-    overflow-y: paged-x;
+    overflow-y: scroll;
     color: var(--dark-shades);
 }
 
@@ -108,6 +108,7 @@ picture > * {
 
 .experience {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-right: var(--margin-big);
@@ -115,9 +116,7 @@ picture > * {
 
 .experience div.dot {
     border-bottom: var(--dark-shades) 1px dotted;
-    margin: var(--margin-small);
-    height: 50%;
-    width: 100%;
+    flex: 1;
 }
 
 .experience .time {

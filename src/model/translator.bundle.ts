@@ -35,6 +35,10 @@ currentLang!.set('experience.engineer.title', 'Zachodniopomorski Uniwersytet Tec
 currentLang!.set('experience.engineer.content', 'Inżynier teleinformatyki');
 
 currentLang!.set('experience.title', 'doświadczenie');
+
+currentLang!.set('experience.teleste.title', 'Teleste');
+currentLang!.set('experience.teleste.content', 'Jako Frontend developer: projekt w Angularze.');
+
 currentLang!.set('experience.unit4.title', 'Unit4');
 currentLang!.set('experience.unit4.content', 'Jako Frontend developer: projekt w Angularze. Sporadycznie zadania w języku Java.');
 

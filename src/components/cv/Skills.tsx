@@ -1,7 +1,6 @@
 import {
     AiFillStar,
     AiOutlineStar,
-    BsInfoSquare
 } from "react-icons/all";
 import React from "react";
 import {translate} from "../../TranslatePipe";
@@ -68,30 +67,31 @@ export function Skills() {
                     0.8,
                     '',
                     '3+ lat'),
+                new Skill(TechnologyType.ANGULAR,
+                    0.8,
+                    '',
+                    '3+ lat'),
+                new Skill(TechnologyType.CSS,
+                    0.6,
+                    'https://github.com/minik01/konsolamini-website/tree/master/src/styles',
+                    '3+ lat'),
                 new Skill(TechnologyType.JAVASCRIPT,
                     0.5,
                     '',
                     '1 rok'),
-                new Skill(TechnologyType.CSS,
-                    0.5,
-                    'https://github.com/minik01/konsolamini-website/tree/master/src/styles',
-                    '3+ lat'),
-                new Skill(TechnologyType.ANGULAR,
-                    0.6,
-                    '',
-                    '3+ lat'),
                 new Skill(TechnologyType.REACT,
-                    0.5,
+                    0.4,
                     'https://github.com/minik01/typed-modeler/blob/master/src/components/ModelManager.tsx',
                     '3+ lat'),
                 new Skill(TechnologyType.KARMA,
                     0.3,
-                    'https://gitlab.com/dominik.wojnar/colorful-matrix-code/-/blob/cmc-003-compresion/src/Compression/Compressor.test.ts',
+                    // 'https://gitlab.com/dominik.wojnar/colorful-matrix-code/-/blob/cmc-003-compresion/src/Compression/Compressor.test.ts',
+                    '',
                     '1 rok'),
             ],
             backend: [
                 new Skill(TechnologyType.JAVA,
-                    0.5,
+                    0.2,
                     '',
                     '3+ lat'),
                 new Skill(TechnologyType.SPRING,
@@ -105,7 +105,7 @@ export function Skills() {
                     '',
                     '2+ lata'),
                 new Skill(TechnologyType.BPMN,
-                    0.7,
+                    0.5,
                     '',
                     '3+ lat'),
             ]
@@ -114,7 +114,7 @@ export function Skills() {
         <>
             <h2>
                 {translate('common.skills')}
-                <BsInfoSquare className={'hide-on-print'} title={translate('common.click-on-element')}/>
+                {/*<BsInfoSquare className={'hide-on-print'} title={translate('common.click-on-element')}/>*/}
             </h2>
             <div id={'skills-list'}>
                 {skills.frontend.map(skill =>

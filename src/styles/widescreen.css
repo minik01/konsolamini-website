@@ -23,6 +23,10 @@
         width: 100%;
     }
 
+    article > ul {
+        padding-left: var(--margin-big);
+    }
+
     .header-panel {
         position: fixed;
         z-index: 3;
@@ -49,6 +53,7 @@
 
     picture > * {
         border-radius: 50%;
+        width: 20vw;
     }
 
     #main {
